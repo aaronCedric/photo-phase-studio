@@ -1,0 +1,443 @@
+@import 'config';
+@import 'myClass';
+
+body {
+    font-family: $primary-font;
+    cursor: crosshair;
+    overflow-x: hidden;
+}
+
+.mdl-layout-spacer {
+    height: 7vh;
+}
+
+.mdl-layout-spacerX2 {
+    height: 20vh;
+}
+
+.mdl-grid {
+    padding: 0px;
+}
+
+// Homepage
+.mdl-grid.bg-dark.for-nav {
+    .order-top {
+        order: 1;
+    }
+    .order-center {
+        order: 2;
+    }
+    .order-bot {
+        order: 3;
+    }
+}
+
+.logo-container {
+    width: 100px;
+    height: 42px;
+    margin: 0 auto;
+    background: url('../img/logo.png');
+    &:hover {
+        background: url('../img/logo-hover.png');
+        @include easeOut;
+    }
+}
+
+.demo-ribbon {
+    width: 100%;
+    height: 60vh;
+    background: url('../img/mountains-01.jpg') center center no-repeat;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    display: table;
+    background-attachment: fixed;
+}
+
+.demo-ribbon-second {
+    width: 100%;
+    height: 60vh;
+    background: url('../img/telescope-2127704_1920.jpg') center center no-repeat;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    display: table;
+    background-attachment: fixed;
+    h1 {
+        color: $color-light;
+        margin-top: 7vh;
+    }
+    h4 {
+        color: $color-light;
+    }
+    .mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored {
+        height: 4rem;
+        width: 8rem;
+        background-color: $color-dark;
+        a {
+            color: $color-light;
+        }
+        a:hover {
+            color: $active;
+            @include easeOut;
+        }
+    }
+    h2 {
+        i {
+            color: $color-light;
+            padding: 0px 1rem;
+            &:hover {
+                color: $active;
+                @include easeOut;
+            }
+        }
+    }
+}
+  
+.demo-main {
+    margin-top: -10vh;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+}
+  
+.demo-header .mdl-layout__header-row {
+    padding-left: 40px;
+}
+  
+.demo-container {
+    max-width: 2500px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+}
+  
+.demo-content {
+    border-radius: 2px;
+    padding: 1.3rem 56px;
+}
+  
+.demo-layout.is-small-screen .demo-content {
+    padding: 40px 28px;
+}
+  
+.mdl-mega-footer.text-center {
+    background-color: $color-dark;
+    color: $color-light;
+    .mdl-layout-spacer {
+        height: 5px;
+        width: 100%;
+        background-color: $color-light;
+    }
+    .active {
+        color: $active;
+    }
+    a:hover {
+        color: $active;
+    }
+}
+
+.card-center {
+    margin: 0 auto;
+}
+
+.demo-card-square.mdl-card {
+    width: 400px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.demo-card-square > .mdl-card__title {
+    color: $color-light;
+    &.studio-card {
+        background: url('../img/our-studio.JPG') center center no-repeat $color-dark;
+    }
+    &.gallery-card {
+        background: url('../img/jellyfish-1078961_1920.jpg') center center no-repeat $color-dark;
+    }
+    &.award-card {
+        background: url('../img/rice-plantation-1822444_1920.jpg') center center no-repeat $color-dark;
+    }
+}
+
+.demo-card-square > .mdl-card__supporting-text {
+    color: $color-dark;
+}
+
+
+// End of Homepage
+
+// Studio
+.demo-ribbon.for-studio {
+    background: url('../img/berchtesgaden-2928712_1920.jpg') center center no-repeat;
+    display: table;
+    background-attachment: fixed;
+}
+
+.demo-header-studio {
+    margin-top: -40vh;
+}
+
+.studio-greetings {
+    h3, p {
+        color: $color-light;
+        // font-size: 5rem;
+    }
+}
+
+.for-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    button {
+        background-color: $color-light;
+        color: $color-dark;
+    }
+}
+
+.for-flex:nth-child(even) {
+    button {
+        background-color: $color-light;
+        color: $color-dark;
+    }
+}
+
+.image-container {
+    margin-bottom: 1.5rem;
+    height: 55vh;
+    &.workstation {
+        background: url('../img/computer-workstations-415138_1920.jpg') no-repeat;
+        background-size: cover;
+    }
+    &.meeting {
+        background: url('../img/chairs-2181960_1920.jpg') no-repeat;
+        background-size: cover;
+    }
+    &.lounge {
+        background: url('../img/architecture-1837058_1920.jpg') no-repeat;
+        background-size: cover;
+    }
+    &.cafeteria {
+        background: url('../img/architecture-971139_1920.jpg') no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.text-container {
+    height: 55vh;
+    margin-bottom: 1.5rem;
+    &:nth-child(odd) {
+        background-color: $color-darkSub;
+        color: $color-light;
+    }
+    &:nth-child(even) {
+        background-color: $color-dark;
+        color: $color-light;
+    }
+    h1 {
+        margin: 0;
+    }
+    p {
+         font-size: 1.5rem;
+    }
+}
+
+
+// End of Studio
+
+// Gallery
+// Carousel
+.slider {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+.slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+}
+
+.slide:nth-child(2) {
+    left: 100%;
+    animation-delay: 2s;
+}
+
+.slide:nth-child(3) {
+    left: 100%;
+    animation-delay: 5s;
+}
+
+.slide:nth-child(4) {
+    left: 100%;
+    animation-delay: 8s;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    30.0001% { left: -100%; width: 0%;}
+    100% { left: 100%; width: 0%;}
+}
+
+.mdl-grid.gallery-main {
+    padding-top: 71vh;
+}
+
+#gallery {
+    min-height: calc(100vh - 50vh);
+}
+
+.container-flex-col {
+    display: flex;
+    flex-direction: column;
+    & > * {
+        margin-top: 1rem;
+    }
+}
+
+.container-flex-row {
+    display: flex;
+    justify-content: center;
+    & > * {
+        padding: 0px 1rem;
+    }
+}
+
+
+// End of Gallery
+
+
+
+
+// Awards
+.award-container {
+    background: url('../img/worldphotoaward-3-800x573.jpg') center no-repeat;
+    height: 70vh;
+    width: 100%;
+}
+
+.award-gallery {
+    height: 70vh;
+    width: 31vw;
+    margin: 0 auto;
+    &-height-01 {
+        height: 100vh;
+    }
+    &-height-02 {
+        height: 60vh;
+    }
+    &-height-03 {
+        height: 50vh;
+    }
+}
+
+.gallery-container {
+    justify-content: center;
+}
+
+
+
+
+// End of Awards
+
+
+
+
+
+// Contact
+.mdl-textfield__input {
+    background-color: $color-light;
+    color: $color-dark;
+    padding: .5rem 1rem;
+}
+
+.mdl-textfield__label {
+    color: $color-dark;
+    padding: .5rem 1rem;
+}
+
+.mdl-button--colored--connect {
+    background-color: $active;
+    &:hover {
+        background-color: $active;
+    }
+}
+
+.mdl-layout-spacer-button {
+    margin-top: 5vh;
+    padding-right: 5.5rem;
+}
+
+.connect-container {
+    width: 100vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.connect-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'connectText   connectText'
+    'connectSocial connectImage';
+    height: 100%;
+
+    .connect-text-container {
+        grid-area: connectText;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 1.5rem;
+        p {
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+    }
+
+    .image-connect-container {
+        grid-area: connectImage;
+        background-size: cover;
+        padding: 0px 1.5rem;
+    }
+
+    .social-container {
+        grid-area: connectSocial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            .social-p {
+                font-size: 3rem;
+                .decor-p {
+                    color: $active;
+                    text-transform: uppercase;
+                }
+            }
+
+            i {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+// End of Contact
+
+@import 'media';

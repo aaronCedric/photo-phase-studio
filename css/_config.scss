@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya|Lato);
+
+$primary-font: 'Alegreya';
+$secondary-font: 'Lato';
+
+$color-dark: #4a6a75;
+$color-darkSub: #75a6b8;
+$color-light: #fdfbff;
+$active: #99cdeb;
+
+
+@mixin easeOut {
+    transition: 0.2s all ease-out;
+}
